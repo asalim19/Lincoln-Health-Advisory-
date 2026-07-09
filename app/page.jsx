@@ -16,25 +16,34 @@ const ComplianceConsultingWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactForm, setContactForm] = useState({ name: '', email: '', inquiry: '' });
 
-  const services = [
+const services = [
     {
       id: 1,
       title: 'Compliance Risk Assessment',
       description: 'Identify and prioritize compliance risks across your operations. We map current state, assess control gaps, and quantify exposure.',
-      
+      maturityLevels: [
+        { level: 1, label: 'Ad-hoc' },
+        { level: 2, label: 'Documented' },
+        { level: 3, label: 'Managed' },
+        { level: 4, label: 'Optimized' },
+      ]
     },
     {
       id: 2,
       title: 'Compliance Maturity Assessment',
       description: 'Benchmark your compliance program against industry standards. Understand current maturity, roadmap improvements, and track progress.',
-     
+      maturityLevels: [
+        { level: 1, label: 'Initial' },
+        { level: 2, label: 'Repeatable' },
+        { level: 3, label: 'Defined' },
+        { level: 4, label: 'Measured' },
       ]
     },
     {
       id: 3,
       title: 'Staff Augmentation & Fractional Support',
       description: 'Access experienced compliance practitioners when and how you need them. Fill project gaps with senior expertise, or engage a fractional compliance leader — executive-level guidance on a part-time basis, without the overhead of a full-time hire.',
-     
+      maturityLevels: [
         { level: 1, label: 'Project-based' },
         { level: 2, label: 'Embedded' },
         { level: 3, label: 'Fractional Leadership' },
@@ -42,8 +51,6 @@ const ComplianceConsultingWebsite = () => {
       ]
     }
   ];
-
-  const events = [
     {
       id: 1,
       date: 'Coming Soon',
@@ -338,7 +345,7 @@ const ComplianceConsultingWebsite = () => {
               <div className="space-y-4">
                 <div>
                   <div className="font-semibold mb-1">Email</div>
-                  <a href="mailto:info@lincolnhealthcareadvisory.com" className="opacity-75">hello@lincolnhealthcareadvisory.com</a>
+                  <a href="mailto:info@lincolnhealthcareadvisory.com" className="opacity-75">info@lincolnhealthcareadvisory.com</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Linkedin size={18} className="green" />
