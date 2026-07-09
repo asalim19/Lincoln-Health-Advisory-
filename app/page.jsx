@@ -22,7 +22,6 @@ const ComplianceConsultingWebsite = () => {
       title: 'Compliance Risk Assessment',
       description: 'Identify and prioritize compliance risks across your operations. We map current state, assess control gaps, and quantify exposure.',
       
-      ]
     },
     {
       id: 2,
