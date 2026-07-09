@@ -98,7 +98,7 @@ const ComplianceConsultingWebsite = () => {
           --navy: #10233E;
           --navy-mid: #1B2F5E;
           --green: #2ECC71;
-          --teal: #28788A;
+          --teal: #427E2B;
           --bg: #FFFFFF;
           --bg-soft: #F7F9FB;
         }
