@@ -51,6 +51,7 @@ const services = [
       ]
     }
   ];
+  const events = [
     {
       id: 1,
       date: 'Coming Soon',
