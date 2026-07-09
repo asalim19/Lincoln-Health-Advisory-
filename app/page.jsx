@@ -20,24 +20,12 @@ const ComplianceConsultingWebsite = () => {
     {
       id: 1,
       title: 'Compliance Risk Assessment',
-      description: 'Identify and prioritize compliance risks across your operations. We map current state, assess control gaps, and quantify exposure.',
-      maturityLevels: [
-        { level: 1, label: 'Ad-hoc' },
-        { level: 2, label: 'Documented' },
-        { level: 3, label: 'Managed' },
-        { level: 4, label: 'Optimized' },
-      ]
+      description: 'Identify and prioritize compliance risks across your operations. We map current state, assess control gaps, and quantify exposure.'
     },
     {
       id: 2,
       title: 'Compliance Maturity Assessment',
-      description: 'Benchmark your compliance program against industry standards. Understand current maturity, roadmap improvements, and track progress.',
-      maturityLevels: [
-        { level: 1, label: 'Initial' },
-        { level: 2, label: 'Repeatable' },
-        { level: 3, label: 'Defined' },
-        { level: 4, label: 'Measured' },
-      ]
+      description: 'Benchmark your compliance program against industry standards. Understand current maturity, roadmap improvements, and track progress.'
     },
     {
       id: 3,
@@ -80,7 +68,7 @@ const ComplianceConsultingWebsite = () => {
 
   const MaturityRubric = ({ levels }) => (
     <div className="mt-4 space-y-2">
-      <div className="text-xs font-semibold uppercase tracking-wider" style={{color: 'var(--navy)'}}>Maturity Levels</div>
+      <div className="text-xs font-semibold uppercase tracking-wider" style={{color: 'var(--navy)'}}>Engagement Models</div>
       <div className="flex gap-2 flex-wrap">
         {levels.map((level, i) => (
           <span key={level.level} className="text-xs px-3 py-1 rounded-full text-white font-medium"
@@ -278,8 +266,7 @@ const ComplianceConsultingWebsite = () => {
             <div key={service.id} className="service-card p-8 bg-white">
               <h3 className="display text-2xl mb-4 navy">{service.title}</h3>
               <p className="opacity-75 mb-6 leading-relaxed">{service.description}</p>
-              <MaturityRubric levels={service.maturityLevels} />
-            </div>
+{service.maturityLevels && <MaturityRubric levels={service.maturityLevels} />}            </div>
           ))}
         </div>
       </section>
