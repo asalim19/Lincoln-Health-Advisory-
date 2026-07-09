@@ -64,11 +64,6 @@ const ComplianceConsultingWebsite = () => {
   const resources = {
     podcasts: [
       {
-        title: 'Confessions of a Compliance Professional',
-        description: 'Real stories and hard-won lessons from the compliance trenches.',
-        link: '#'
-      },
-      {
         title: 'Finding Compliance',
         description: 'Practical conversations on building mature compliance programs.',
         link: '#'
