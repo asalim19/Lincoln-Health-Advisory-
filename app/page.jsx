@@ -252,7 +252,7 @@ const ComplianceConsultingWebsite = () => {
               <div className="section-divider"></div>
               <h2 className="display text-3xl md:text-4xl mb-6 navy">About Us</h2>
               <p className="mb-4 opacity-75 leading-relaxed">
-                We're senior healthcare compliance practitioners. After years at the Big Four, we built this firm to deliver differently: deeper expertise, faster turnaround, and pricing that reflects efficiency, not headcount.
+                We are senior healthcare compliance practitioners. After years at the Big Four, we built this firm to deliver differently: deeper expertise, real insight, not consulting fluff, and pricing that reflects efficiency, not headcount.
               </p>
               <p className="opacity-75 leading-relaxed">
                 Our assessments are built on 15+ years of real-world compliance program work. We know what maturity looks like because we've built it.
