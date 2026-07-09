@@ -1,10 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, X, ArrowRight, Linkedin, Calendar, BookOpen, Mic } from 'lucide-react';
-
+import { Menu, X, ArrowRight, Calendar, BookOpen, Mic } from 'lucide-react';
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory'; // update to your actual page
-
+const Linkedin = ({ size = 20, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+  </svg>
+);
 const ComplianceConsultingWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactForm, setContactForm] = useState({ name: '', email: '', inquiry: '' });
