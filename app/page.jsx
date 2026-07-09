@@ -16,26 +16,34 @@ const ComplianceConsultingWebsite = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactForm, setContactForm] = useState({ name: '', email: '', inquiry: '' });
 
-const services = [
+  const services = [
     {
       id: 1,
       title: 'Compliance Risk Assessment',
       description: 'Identify and prioritize compliance risks across your operations. We map current state, assess control gaps, and quantify exposure.',
-      
+      maturityLevels: [
+        { level: 1, label: 'Ad-hoc' },
+        { level: 2, label: 'Documented' },
+        { level: 3, label: 'Managed' },
+        { level: 4, label: 'Optimized' },
       ]
     },
     {
       id: 2,
       title: 'Compliance Maturity Assessment',
       description: 'Benchmark your compliance program against industry standards. Understand current maturity, roadmap improvements, and track progress.',
-     
+      maturityLevels: [
+        { level: 1, label: 'Initial' },
+        { level: 2, label: 'Repeatable' },
+        { level: 3, label: 'Defined' },
+        { level: 4, label: 'Measured' },
       ]
     },
     {
       id: 3,
       title: 'Staff Augmentation & Fractional Support',
       description: 'Access experienced compliance practitioners when and how you need them. Fill project gaps with senior expertise, or engage a fractional compliance leader — executive-level guidance on a part-time basis, without the overhead of a full-time hire.',
-      [
+      maturityLevels: [
         { level: 1, label: 'Project-based' },
         { level: 2, label: 'Embedded' },
         { level: 3, label: 'Fractional Leadership' },
@@ -43,6 +51,7 @@ const services = [
       ]
     }
   ];
+
   const events = [
     {
       id: 1,
@@ -303,7 +312,7 @@ const services = [
           <h2 className="display text-3xl md:text-4xl navy">Resources</h2>
         </div>
 
-        <h3 className="display text-2xl mb-6 navy flex items-center gap-2"><Mic size={22} className="green" /> Podcasts</h3>
+        <h3 className="display text-2xl mb-6 navy flex items-center gap-2"><Mic size={22} className="green" /> Podcast</h3>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {resources.podcasts.map((pod, i) => (
             <a key={i} href={pod.link} className="service-card p-8 bg-white block">
