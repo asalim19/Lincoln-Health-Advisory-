@@ -6,7 +6,7 @@ import { ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 
 // ⬇️ REPLACE these two before launch
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdlnvkj';
-const CALENDLY_URL = 'https://calendly.com/YOUR_LINK/results-review';
+const CALENDLY_URL = 'https://calendly.com/ahmed-lincolnhealthcareadvisory/new-meeting';
 
 const QUESTIONS = [
   { element: 'Leadership & Governance', q: 'How would you describe board and senior leadership engagement with the compliance program?' },
