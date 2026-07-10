@@ -205,7 +205,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#offerings" className="block py-2">Offerings</a>
             <a href="#events" className="block py-2">Events</a>
             <a href="#resources" className="block py-2">Resources</a>
-             <a href="/assessment" className="nav-link">Free Assessment</a>
+            <a href="/assessment" className="nav-link">Free Assessment</a>
             <a href="/platform" className="nav-link">MaturityIQ</a>
             <a href="#contact" className="block py-2">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="py-2 flex items-center gap-2"><Linkedin size={18} /> LinkedIn</a>
