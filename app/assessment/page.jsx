@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 
 // ⬇️ REPLACE these two before launch
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdlnvkj';
 const CALENDLY_URL = 'https://calendly.com/YOUR_LINK/results-review';
 
 const QUESTIONS = [
