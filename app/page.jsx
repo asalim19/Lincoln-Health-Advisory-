@@ -189,6 +189,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#events" className="nav-link">Events</a>
             <a href="#resources" className="nav-link">Resources</a>
             <a href="/assessment" className="nav-link">Free Assessment</a>
+            <a href="/platform" className="nav-link">Platform</a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
             <a href="#contact"><button className="cta-button">Get Started</button></a>
@@ -205,6 +206,8 @@ const ComplianceConsultingWebsite = () => {
             <a href="#offerings" className="block py-2">Offerings</a>
             <a href="#events" className="block py-2">Events</a>
             <a href="#resources" className="block py-2">Resources</a>
+             <a href="/assessment" className="nav-link">Free Assessment</a>
+            <a href="/platform" className="nav-link">Platform</a>
             <a href="#contact" className="block py-2">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="py-2 flex items-center gap-2"><Linkedin size={18} /> LinkedIn</a>
           </div>
