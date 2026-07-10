@@ -6,7 +6,7 @@ import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck
 
 // ⬇️ Working product name — change here, updates everywhere
 const PRODUCT_NAME = 'MaturityIQ';
-const CALENDLY_URL = 'https://calendly.com/YOUR_LINK/platform-demo'; // update
+const CALENDLY_URL = 'https://calendly.com/ahmed-lincolnhealthcareadvisory/maturityiq'; // update
 
 export default function PlatformPage() {
   const features = [
