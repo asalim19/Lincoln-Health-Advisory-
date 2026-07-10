@@ -116,8 +116,7 @@ const ComplianceConsultingWebsite = () => {
         .bg-soft { background-color: var(--bg-soft); }
         a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
         a:hover { color: var(--green); }
-        .nav-link { position: relative; font-size: 0.9375rem; font-weight: 500; }
-        .nav-link::after {
+.nav-link { position: relative; font-size: 0.9375rem; font-weight: 500; white-space: nowrap; }        .nav-link::after {
           content: '';
           position: absolute;
           bottom: -2px; left: 0;
