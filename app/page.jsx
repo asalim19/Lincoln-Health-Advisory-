@@ -182,7 +182,7 @@ const ComplianceConsultingWebsite = () => {
             <Image src="/logo.png" alt="Lincoln Healthcare Advisory" width={220} height={76} priority />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <a href="#about" className="nav-link">About</a>
             <a href="#offerings" className="nav-link">Offerings</a>
             <a href="#events" className="nav-link">Events</a>
