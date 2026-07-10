@@ -102,11 +102,21 @@ export default function PlatformPage() {
       <section style={{ backgroundColor: '#F7F9FB', padding: '4.5rem 1.5rem' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div className="pf-divider"></div>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>The problem with point-in-time assessments</h2>
+         <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>Two ways to measure. One maturity model.</h2>
           <p style={{ opacity: .78, lineHeight: 1.75, maxWidth: 780, marginBottom: '1rem' }}>
-            Most organizations assess compliance maturity once every few years, through an expensive engagement that produces
-            a report — and then the report sits on a shelf while the program drifts. Regulators, meanwhile, ask a harder question:
-            does the program work in practice, continuously, and can you prove it?
+            A comprehensive, practitioner-led maturity assessment is the gold standard — validated through documentation
+            review and interviews, it gives you a defensible baseline and a roadmap you can take to the board. Some
+            organizations need exactly that.
+          </p>
+          <p style={{ opacity: .78, lineHeight: 1.75, maxWidth: 780, marginBottom: '1rem' }}>
+            But between formal assessments — or for organizations that want a lighter-touch, more frequent read on their
+            program without engaging outside consultants — {PRODUCT_NAME} puts the same maturity model in your team's hands.
+            Check your program quarterly. Track corrective actions. Walk into board meetings with current numbers instead
+            of last year's report.
+          </p>
+          <p style={{ opacity: .78, lineHeight: 1.75, maxWidth: 780 }}>
+            They're built on the same proprietary framework, so they work together: license the platform for continuous
+            visibility, and bring in our senior practitioners when you want independent validation or deeper expertise.
           </p>
           <p style={{ opacity: .78, lineHeight: 1.75, maxWidth: 780 }}>
             {PRODUCT_NAME} turns maturity assessment from an event into an operating capability your team runs continuously —
