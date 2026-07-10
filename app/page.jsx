@@ -225,10 +225,47 @@ const ComplianceConsultingWebsite = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact"><button className="cta-button">Schedule Assessment <ArrowRight size={18} /></button></a>
-            <a href="#offerings"><button className="cta-button-outline">Learn More</button></a>
+           <a href="#offerings"><button className="cta-button-outline">Learn More</button></a>
           </div>
         </div>
       </section>
+
+      {/* Three Pillars */}
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <div className="service-card p-8 bg-white" style={{borderTopColor: '#1B2F5E'}}>
+            <div className="display text-sm font-semibold uppercase tracking-widest mb-3" style={{color: '#1B2F5E'}}>Pillar One</div>
+            <h3 className="display text-2xl mb-4 navy">Advisory</h3>
+            <p className="opacity-75 leading-relaxed text-sm">
+              Lincoln Healthcare Advisory provides strategic expertise, implementation support, and executive guidance — senior practitioners, delivering directly.
+            </p>
+          </div>
+
+          <div className="service-card p-8 bg-white" style={{borderTopColor: '#28788A'}}>
+            <div className="display text-sm font-semibold uppercase tracking-widest mb-3" style={{color: '#28788A'}}>Pillar Two</div>
+            <h3 className="display text-2xl mb-4 navy">Intelligence</h3>
+            <p className="opacity-75 leading-relaxed text-sm">
+              MaturityIQ delivers AI-powered measurement, benchmarking, and insights — your compliance program, scored the way regulators evaluate it.
+            </p>
+            <a href="/platform" className="green text-sm font-semibold mt-4 inline-flex items-center gap-1">
+              Explore the platform <ArrowRight size={14} />
+            </a>
+          </div>
+
+          <div className="service-card p-8 bg-white" style={{borderTopColor: '#2ECC71'}}>
+            <div className="display text-sm font-semibold uppercase tracking-widest mb-3" style={{color: '#427E2B'}}>Pillar Three</div>
+            <h3 className="display text-2xl mb-4 navy">Transformation</h3>
+            <p className="opacity-75 leading-relaxed text-sm">
+              Together, they enable healthcare organizations to continuously improve compliance program effectiveness — in a measurable, demonstrable way.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* About */}
+      
 
       {/* About */}
       <section id="about" className="bg-soft py-24">
