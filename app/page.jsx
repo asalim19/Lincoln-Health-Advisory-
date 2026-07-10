@@ -188,6 +188,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#offerings" className="nav-link">Offerings</a>
             <a href="#events" className="nav-link">Events</a>
             <a href="#resources" className="nav-link">Resources</a>
+            <a href="/assessment" className="nav-link">Free Assessment</a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
             <a href="#contact"><button className="cta-button">Get Started</button></a>
