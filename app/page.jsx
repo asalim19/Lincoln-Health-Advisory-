@@ -31,12 +31,11 @@ const ComplianceConsultingWebsite = () => {
       id: 3,
       title: 'Staff Augmentation & Fractional Support',
       description: 'Access experienced compliance practitioners when and how you need them. Fill project gaps with senior expertise, or engage a fractional compliance leader — executive-level guidance on a part-time basis, without the overhead of a full-time hire.',
-      maturityLevels: [
-        { level: 1, label: 'Project-based' },
-        { level: 2, label: 'Embedded' },
-        { level: 3, label: 'Fractional Leadership' },
-        { level: 4, label: 'Strategic Oversight' },
-      ]
+    {
+      id: 4,
+      title: 'MaturityIQ — Compliance Maturity Platform',
+      description: 'License our AI-powered platform to measure and mature your compliance program on your own schedule. Built on the same proprietary maturity model as our assessments — grounded in DOJ ECCP and OIG effectiveness frameworks — with continuous scoring, roadmaps, and board-ready reporting.',
+      isPlatform: true
     }
   ];
 
@@ -303,9 +302,14 @@ const ComplianceConsultingWebsite = () => {
         </div>
         <div className="grid gap-6">
           {services.map((service) => (
-            <div key={service.id} className="service-card p-8 bg-white">
+<div key={service.id} className="service-card p-8 bg-white" style={service.isPlatform ? {borderTopColor: '#28788A'} : {}}>
+{service.isPlatform && <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{color: '#28788A'}}>Licensed Platform</div>}
               <h3 className="display text-2xl mb-4 navy">{service.title}</h3>
-              <p className="opacity-75 mb-6 leading-relaxed">{service.description}</p>
+              {service.isPlatform && (
+                <a href="/platform" className="green text-sm font-semibold inline-flex items-center gap-1 mb-4">
+                  Learn more about MaturityIQ <ArrowRight size={14} />
+                </a>
+              )}              <p className="opacity-75 mb-6 leading-relaxed">{service.description}</p>
 {service.maturityLevels && <MaturityRubric levels={service.maturityLevels} />}            </div>
           ))}
         </div>
