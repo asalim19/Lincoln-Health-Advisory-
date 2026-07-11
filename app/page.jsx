@@ -31,6 +31,13 @@ const ComplianceConsultingWebsite = () => {
       id: 3,
       title: 'Staff Augmentation & Fractional Support',
       description: 'Access experienced compliance practitioners when and how you need them. Fill project gaps with senior expertise, or engage a fractional compliance leader — executive-level guidance on a part-time basis, without the overhead of a full-time hire.',
+      maturityLevels: [
+        { level: 1, label: 'Project-based' },
+        { level: 2, label: 'Embedded' },
+        { level: 3, label: 'Fractional Leadership' },
+        { level: 4, label: 'Strategic Oversight' },
+      ]
+    },
     {
       id: 4,
       title: 'MaturityIQ — Compliance Maturity Platform',
