@@ -49,7 +49,7 @@ const ComplianceConsultingWebsite = () => {
     }
   ];
 
-  const resources = {
+  const insights = {
     podcasts: [
       {
         title: 'Finding Compliance',
@@ -186,7 +186,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#about" className="nav-link">About</a>
             <a href="#offerings" className="nav-link">Offerings</a>
             <a href="#events" className="nav-link">Events</a>
-            <a href="#resources" className="nav-link">Resources</a>
+            <a href="#resources" className="nav-link">Insights</a>
             <a href="/assessment" className="nav-link">Free Assessment</a>
             <a href="/platform" className="nav-link">MaturityIQ</a>
             <a href="#contact" className="nav-link">Contact</a>
@@ -204,7 +204,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#about" className="block py-2">About</a>
             <a href="#offerings" className="block py-2">Offerings</a>
             <a href="#events" className="block py-2">Events</a>
-            <a href="#resources" className="block py-2">Resources</a>
+            <a href="#resources" className="block py-2">Insights</a>
             <a href="/assessment" className="block py-2">Free Assessment</a>
             <a href="/platform" className="block py-2">MaturityIQ</a>
             <a href="#contact" className="block py-2">Contact</a>
@@ -221,7 +221,7 @@ const ComplianceConsultingWebsite = () => {
             Compliance expertise, <span className="green">practitioner-led</span>.
           </h1>
           <p className="text-lg md:text-xl opacity-75 mb-8 max-w-2xl leading-relaxed">
-            We help hospitals and health systems build mature compliance programs. Senior practitioners, not junior staff. Real assessment, not checkbox audits.
+            We help hospitals and health systems build mature compliance programs. Senior practitioners, not junior staff. Real assessments, not checkbox audits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact"><button className="cta-button">Schedule Assessment <ArrowRight size={18} /></button></a>
