@@ -186,7 +186,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#about" className="nav-link">About</a>
             <a href="#offerings" className="nav-link">Offerings</a>
             <a href="#events" className="nav-link">Events</a>
-            <a href="#resources" className="nav-link">Insights</a>
+            <a href="#insights" className="nav-link">Insights</a>
             <a href="/assessment" className="nav-link">Free Assessment</a>
             <a href="/platform" className="nav-link">MaturityIQ</a>
             <a href="#contact" className="nav-link">Contact</a>
@@ -204,7 +204,7 @@ const ComplianceConsultingWebsite = () => {
             <a href="#about" className="block py-2">About</a>
             <a href="#offerings" className="block py-2">Offerings</a>
             <a href="#events" className="block py-2">Events</a>
-            <a href="#resources" className="block py-2">Insights</a>
+            <a href="#insights" className="block py-2">Insights</a>
             <a href="/assessment" className="block py-2">Free Assessment</a>
             <a href="/platform" className="block py-2">MaturityIQ</a>
             <a href="#contact" className="block py-2">Contact</a>
@@ -336,17 +336,17 @@ const ComplianceConsultingWebsite = () => {
         </div>
       </section>
 
-      {/* Resources */}
-      <section id="resources" className="max-w-6xl mx-auto px-6 py-24">
+      {/* Insights */}
+      <section id="insights" className="max-w-6xl mx-auto px-6 py-24">
         <div className="section-divider"></div>
         <div className="mb-12 flex items-center gap-3">
           <BookOpen size={28} className="green" />
-          <h2 className="display text-3xl md:text-4xl navy">Resources</h2>
+          <h2 className="display text-3xl md:text-4xl navy">Insights</h2>
         </div>
 
         <h3 className="display text-2xl mb-6 navy flex items-center gap-2"><Mic size={22} className="green" /> Podcast</h3>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
-          {resources.podcasts.map((pod, i) => (
+          {insights.podcasts.map((pod, i) => (
             <a key={i} href={pod.link} className="service-card p-8 bg-white block">
               <h4 className="display text-xl mb-3 navy">{pod.title}</h4>
               <p className="opacity-75 leading-relaxed text-sm">{pod.description}</p>
@@ -357,7 +357,7 @@ const ComplianceConsultingWebsite = () => {
 
         <h3 className="display text-2xl mb-6 navy">Articles</h3>
         <div className="grid gap-6">
-          {resources.articles.map((article, i) => (
+          {insights.articles.map((article, i) => (
             <a key={i} href={article.link} className="service-card p-8 bg-white block">
               <h4 className="display text-xl mb-3 navy">{article.title}</h4>
               <p className="opacity-75 leading-relaxed text-sm">{article.description}</p>
@@ -388,6 +388,7 @@ const ComplianceConsultingWebsite = () => {
               </div>
             </div>
 
+I
             <form onSubmit={handleContactSubmit} className="space-y-4">
               <input type="text" placeholder="Your name" value={contactForm.name}
                 onChange={(e) => setContactForm({...contactForm, name: e.target.value})} required className="w-full" />
@@ -408,7 +409,7 @@ const ComplianceConsultingWebsite = () => {
             <div className="display text-lg">Lincoln Healthcare Advisory</div>
             <div className="flex items-center gap-8 text-sm opacity-80">
               <a href="#events">Events</a>
-              <a href="#resources">Resources</a>
+              <a href="#insights">Insights</a>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             </div>
           </div>
