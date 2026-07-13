@@ -80,14 +80,14 @@ export default function AssessmentPage() {
         .aq-btn { display:block; width:100%; text-align:left; padding:1rem 1.25rem; margin-bottom:0.75rem;
           border:2px solid rgba(16,35,62,0.15); border-radius:10px; background:white; color:#10233E;
           font-family:inherit; font-size:1rem; cursor:pointer; transition:all .15s ease; }
-        .aq-btn:hover { border-color:#2ECC71; background:#F0FBF4; }
-        .aq-cta { background:#2ECC71; color:white; border:none; padding:0.9rem 1.75rem; border-radius:8px;
+        .aq-btn:hover { border-color:#29B866; background:#F0FBF4; }
+        .aq-cta { background:#29B866; color:white; border:none; padding:0.9rem 1.75rem; border-radius:8px;
           font-weight:600; font-size:1rem; cursor:pointer; display:inline-flex; align-items:center; gap:.5rem; }
         .aq-cta:hover { background:#10233E; }
         .aq-cta:disabled { opacity:.6; cursor:default; }
         .aq-input { width:100%; padding:.8rem; border:1px solid rgba(16,35,62,.25); border-radius:8px;
           font-family:inherit; font-size:1rem; margin-bottom:1rem; }
-        .aq-input:focus { outline:none; border-color:#2ECC71; box-shadow:0 0 0 3px rgba(46,204,113,.2); }
+        .aq-input:focus { outline:none; border-color:#29B866; box-shadow:0 0 0 3px rgba(46,204,113,.2); }
       `}</style>
 
       {/* Header */}
@@ -100,7 +100,7 @@ export default function AssessmentPage() {
       {/* Progress bar */}
       {step >= 0 && step <= QUESTIONS.length && (
         <div style={{ height: 6, background: 'rgba(16,35,62,0.08)' }}>
-          <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(to right,#1B2F5E,#28788A,#2ECC71)', transition: 'width .3s ease' }} />
+          <div style={{ height: '100%', width: `${progress}%`, background: 'linear-gradient(to right,#1B2F5E,#28788A,#29B866)', transition: 'width .3s ease' }} />
         </div>
       )}
 
@@ -132,7 +132,7 @@ export default function AssessmentPage() {
             <h2 style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: 1.35, marginBottom: '1.5rem' }}>{QUESTIONS[step].q}</h2>
             {OPTIONS.map((opt, oi) => (
               <button key={oi} className="aq-btn" onClick={() => answer(step, oi)}
-                style={answers[step] === oi ? { borderColor: '#2ECC71', background: '#F0FBF4' } : {}}>
+                style={answers[step] === oi ? { borderColor: '#29B866', background: '#F0FBF4' } : {}}>
                 <span style={{ color: '#427E2B', fontWeight: 700, marginRight: 8 }}>{oi + 1}</span>{opt}
               </button>
             ))}
@@ -147,7 +147,7 @@ export default function AssessmentPage() {
         {/* Contact gate */}
         {step === QUESTIONS.length && (
           <div>
-            <CheckCircle size={44} color="#2ECC71" style={{ marginBottom: '1rem' }} />
+            <CheckCircle size={44} color="#29B866" style={{ marginBottom: '1rem' }} />
             <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '.75rem' }}>Your assessment is complete.</h2>
             <p style={{ opacity: .8, lineHeight: 1.7, marginBottom: '1.5rem' }}>
               Tell us where to send your results, then pick a time for your complimentary 30-minute results review. We'll score your program across all eight elements and walk you through a prioritized roadmap — no charge, no obligation.
@@ -172,7 +172,7 @@ export default function AssessmentPage() {
         {/* Done → schedule */}
         {step === 17 && (
           <div style={{ textAlign: 'center', paddingTop: '2rem' }}>
-            <CheckCircle size={56} color="#2ECC71" style={{ marginBottom: '1rem' }} />
+            <CheckCircle size={56} color="#29B866" style={{ marginBottom: '1rem' }} />
             <h2 style={{ fontSize: '1.9rem', fontWeight: 700, marginBottom: '.75rem' }}>One last step — schedule your results review.</h2>
             <p style={{ opacity: .8, lineHeight: 1.7, marginBottom: '2rem', maxWidth: 520, marginLeft: 'auto', marginRight: 'auto' }}>
               We've received your responses. Pick a time below and we'll walk through your scores, how you compare, and the three moves that would raise your maturity fastest.
