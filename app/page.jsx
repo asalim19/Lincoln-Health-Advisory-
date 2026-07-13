@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { logoDataUri } from './logoData';
 import { Menu, X, ArrowRight, Calendar, BookOpen, Mic, Users, Briefcase, Mail } from 'lucide-react';
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory'; // update to your actual page
 
@@ -178,7 +179,7 @@ const ComplianceConsultingWebsite = () => {
       <nav className="sticky top-0 z-40 border-b" style={{backgroundColor: 'white', borderColor: 'rgba(16,35,62,0.08)'}}>
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <a href="#top" className="flex items-center">
-            <Image src="/logo.png" alt="Lincoln Healthcare Advisory" width={220} height={76} priority />
+<img src={logoDataUri} alt="Lincoln Healthcare Advisory" width={220} height={76} />
           </a>
 
           <div className="hidden md:flex items-center gap-6">
