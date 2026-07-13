@@ -71,7 +71,7 @@ const ComplianceConsultingWebsite = () => {
       <div className="flex gap-2 flex-wrap">
         {levels.map((level, i) => (
           <span key={level.level} className="text-xs px-3 py-1 rounded-full text-white font-medium"
-            style={{backgroundColor: ['#1B2F5E', '#28788A', '#2D9670', '#2ECC71'][i]}}>
+            style={{backgroundColor: ['#1B2F5E', '#28788A', '#2D9670', '#29B866'][i]}}>
             {level.level}. {level.label}
           </span>
         ))}
@@ -92,7 +92,7 @@ const ComplianceConsultingWebsite = () => {
         :root {
           --navy: #10233E;
           --navy-mid: #1B2F5E;
-          --green: #2ECC71;
+          --green: #29B866;
           --teal: #427E2B;
           --bg: #FFFFFF;
           --bg-soft: #F7F9FB;
@@ -171,7 +171,7 @@ const ComplianceConsultingWebsite = () => {
           background-color: white;
           color: var(--navy);
         }
-        input:focus, textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2); }
+        input:focus, textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(41, 184, 102, 0.2); }
       `}</style>
 
       {/* Navigation */}
