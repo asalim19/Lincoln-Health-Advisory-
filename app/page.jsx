@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Menu, X, ArrowRight, Calendar, BookOpen, Mic } from 'lucide-react';
-
+import { Menu, X, ArrowRight, Calendar, BookOpen, Mic, Users, Briefcase, Mail } from 'lucide-react';
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory'; // update to your actual page
 
 const Linkedin = ({ size = 20, className = '' }) => (
@@ -273,7 +272,10 @@ const ComplianceConsultingWebsite = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <div className="section-divider"></div>
-              <h2 className="display text-3xl md:text-4xl mb-6 navy">About Us</h2>
+<div className="mb-6 flex items-center gap-3">
+                <Users size={28} className="green" />
+                <h2 className="display text-3xl md:text-4xl navy">About Us</h2>
+              </div>           
               <p className="mb-4 opacity-75 leading-relaxed">
                 We are senior healthcare compliance practitioners. After years at the Big Four, we built this firm to deliver differently: deeper expertise, real insight, not consulting fluff, and pricing that reflects efficiency, not headcount.
               </p>
@@ -298,7 +300,10 @@ const ComplianceConsultingWebsite = () => {
       <section id="offerings" className="max-w-6xl mx-auto px-6 py-24">
         <div className="mb-16">
           <div className="section-divider"></div>
-          <h2 className="display text-3xl md:text-4xl mb-4 navy">Our Offerings</h2>
+<div className="mb-4 flex items-center gap-3">
+            <Briefcase size={28} className="green" />
+            <h2 className="display text-3xl md:text-4xl navy">Our Offerings</h2>
+          </div>
           <p className="opacity-75 max-w-2xl">Each engagement is grounded in maturity frameworks. We measure current state, identify gaps, and help you build toward operational excellence.</p>
         </div>
         <div className="grid gap-6">
@@ -344,7 +349,7 @@ const ComplianceConsultingWebsite = () => {
           <h2 className="display text-3xl md:text-4xl navy">Insights</h2>
         </div>
 
-        <h3 className="display text-2xl mb-6 navy flex items-center gap-2"><Mic size={22} className="green" /> Podcast</h3>
+<h3 className="display text-2xl mb-6 navy">Podcast</h3>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {insights.podcasts.map((pod, i) => (
             <a key={i} href={pod.link} className="service-card p-8 bg-white block">
@@ -372,7 +377,10 @@ const ComplianceConsultingWebsite = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <div className="section-divider"></div>
-              <h2 className="display text-3xl md:text-4xl mb-6 navy">Get in Touch</h2>
+<div className="mb-6 flex items-center gap-3">
+                <Mail size={28} className="green" />
+                <h2 className="display text-3xl md:text-4xl navy">Get in Touch</h2>
+              </div>
               <p className="opacity-75 mb-8 leading-relaxed">
                 Ready to assess your compliance maturity? Let's talk about where you are, where you need to be, and how to get there.
               </p>
