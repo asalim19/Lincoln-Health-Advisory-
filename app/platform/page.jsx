@@ -51,18 +51,18 @@ export default function PlatformPage() {
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#FFFFFF', fontFamily: "'Poppins', sans-serif", color: '#10233E' }}>
       <style>{`
-        .pf-cta { background:#2ECC71; color:white; border:none; padding:0.9rem 1.75rem; border-radius:8px;
+        .pf-cta { background:#29B866; color:white; border:none; padding:0.9rem 1.75rem; border-radius:8px;
           font-weight:600; font-size:1rem; cursor:pointer; display:inline-flex; align-items:center; gap:.5rem;
           font-family:inherit; transition:all .2s ease; }
         .pf-cta:hover { background:#10233E; }
         .pf-cta-outline { background:transparent; color:#10233E; border:2px solid #10233E; padding:0.8rem 1.75rem;
           border-radius:8px; font-weight:600; font-size:1rem; cursor:pointer; font-family:inherit; transition:all .2s ease; }
         .pf-cta-outline:hover { background:#10233E; color:white; }
-        .pf-card { border:1px solid rgba(16,35,62,0.12); border-radius:12px; border-top:4px solid #2ECC71;
+        .pf-card { border:1px solid rgba(16,35,62,0.12); border-radius:12px; border-top:4px solid #29B866;
           padding:2rem; background:white; transition:all .3s ease; }
         .pf-card:hover { box-shadow:0 12px 32px rgba(16,35,62,0.12); transform:translateY(-3px); }
         .pf-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
-        .pf-divider { height:4px; width:80px; background:linear-gradient(to right,#1B2F5E,#28788A,#2ECC71);
+        .pf-divider { height:4px; width:80px; background:linear-gradient(to right,#1B2F5E,#28788A,#29B866);
           border-radius:2px; margin-bottom:2rem; }
         a { color:inherit; text-decoration:none; }
       `}</style>
@@ -83,7 +83,7 @@ export default function PlatformPage() {
             {PRODUCT_NAME.toUpperCase()} — COMPLIANCE MATURITY PLATFORM
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem' }}>
-            Your compliance program, <span style={{ color: '#2ECC71' }}>measured like regulators measure it.</span>
+            Your compliance program, <span style={{ color: '#29B866' }}>measured like regulators measure it.</span>
           </h1>
           <p style={{ fontSize: '1.15rem', opacity: .78, lineHeight: 1.7, marginBottom: '2rem', maxWidth: 640 }}>
             {PRODUCT_NAME} is an AI-powered platform that helps healthcare organizations assess, score, and mature their
@@ -132,7 +132,7 @@ export default function PlatformPage() {
         <div className="pf-grid">
           {features.map((f, i) => (
             <div key={i} className="pf-card">
-              <div style={{ color: '#2ECC71', marginBottom: '1rem' }}>{f.icon}</div>
+              <div style={{ color: '#29B866', marginBottom: '1rem' }}>{f.icon}</div>
               <h3 style={{ fontSize: '1.15rem', fontWeight: 600, marginBottom: '.6rem' }}>{f.title}</h3>
               <p style={{ fontSize: '.92rem', opacity: .75, lineHeight: 1.65 }}>{f.description}</p>
             </div>
@@ -148,7 +148,7 @@ export default function PlatformPage() {
           <div className="pf-grid">
             {steps.map((s, i) => (
               <div key={i} style={{ padding: '1rem' }}>
-                <div style={{ fontSize: '2.6rem', fontWeight: 700, color: '#2ECC71', marginBottom: '.5rem' }}>{s.n}</div>
+                <div style={{ fontSize: '2.6rem', fontWeight: 700, color: '#29B866', marginBottom: '.5rem' }}>{s.n}</div>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '.5rem' }}>{s.title}</h3>
                 <p style={{ opacity: .75, lineHeight: 1.65 }}>{s.text}</p>
               </div>
