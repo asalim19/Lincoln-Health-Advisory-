@@ -87,7 +87,7 @@ export default function AssessmentPage() {
         .aq-cta:disabled { opacity:.6; cursor:default; }
         .aq-input { width:100%; padding:.8rem; border:1px solid rgba(16,35,62,.25); border-radius:8px;
           font-family:inherit; font-size:1rem; margin-bottom:1rem; }
-        .aq-input:focus { outline:none; border-color:#29B866; box-shadow:0 0 0 3px rgba(46,204,113,.2); }
+        .aq-input:focus { outline:none; border-color:#29B866; box-shadow:0 0 0 3px rgba(41,184,102,.2); }
       `}</style>
 
       {/* Header */}
