@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import { logoDataUri } from '../logoData';
 import { ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 
 // ⬇️ REPLACE these two before launch
@@ -93,7 +93,7 @@ export default function AssessmentPage() {
       {/* Header */}
       <div style={{ background: 'white', borderBottom: '1px solid rgba(16,35,62,0.08)', padding: '0.75rem 1.5rem' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <a href="/"><Image src="/logo.png" alt="Lincoln Healthcare Advisory" width={180} height={62} /></a>
+<a href="/"><img src={logoDataUri} alt="Lincoln Healthcare Advisory" width={180} height={62} /></a>
         </div>
       </div>
 
