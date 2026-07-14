@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import { logoDataUri } from '../logoData';
 import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck } from 'lucide-react';
 
 // ⬇️ Working product name — change here, updates everywhere
@@ -70,7 +70,7 @@ export default function PlatformPage() {
       {/* Header */}
       <div style={{ background: 'white', borderBottom: '1px solid rgba(16,35,62,0.08)', padding: '0.75rem 1.5rem', position: 'sticky', top: 0, zIndex: 40 }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <a href="/"><Image src="/logo.png" alt="Lincoln Healthcare Advisory" width={190} height={65} /></a>
+<a href="/"><img src={logoDataUri} alt="Lincoln Healthcare Advisory" width={190} height={65} /></a>
           <a href="/"><span style={{ fontSize: '.9rem', fontWeight: 500 }}>← Back to main site</span></a>
         </div>
       </div>
