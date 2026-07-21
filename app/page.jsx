@@ -394,7 +394,7 @@ const ComplianceConsultingWebsite = () => {
 
        <h3 className="display text-2xl mb-6 navy">Articles</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          {resources.articles.map((article, i) => (
+          {insights.articles.map((article, i) => (
             <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="service-card p-8 bg-white block">
               {article.publication && (
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full text-white mb-3" style={{backgroundColor: 'var(--green)'}}>
