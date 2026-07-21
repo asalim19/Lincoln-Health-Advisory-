@@ -43,9 +43,16 @@ const ComplianceConsultingWebsite = () => {
   const events = [
     {
       id: 1,
+      date: '[October 08, 2026]', // replace with your actual event date
+      title: 'Compliance Foundations Summit 2026',
+      description: 'A virtual summit covering the foundations of an effective healthcare compliance program — practical guidance for compliance officers, GCs, and executive leadership.',
+      registerLink: 'https://us05web.zoom.us/meeting/register/bFNdrQvvR7CavUV-SHXL7Q'
+    },
+    {
+      id: 2,
       date: 'Coming Soon',
       title: 'Speaking engagements & webinars',
-      description: 'Upcoming conference sessions, webinars, and workshops will be posted here.'
+      description: 'Additional conference sessions, webinars, and workshops will be posted here.'
     }
   ];
 
@@ -335,7 +342,12 @@ const ComplianceConsultingWebsite = () => {
               <div key={event.id} className="service-card p-8 bg-white">
                 <div className="text-sm green font-semibold mb-2">{event.date}</div>
                 <h3 className="display text-2xl mb-3 navy">{event.title}</h3>
-                <p className="opacity-75 leading-relaxed">{event.description}</p>
+                <p className="opacity-75 leading-relaxed mb-4">{event.description}</p>
+                {event.registerLink && (
+                  <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
+                    <button className="cta-button">Register Now <ArrowRight size={18} /></button>
+                  </a>
+                )}
               </div>
             ))}
           </div>
