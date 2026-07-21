@@ -64,11 +64,30 @@ const ComplianceConsultingWebsite = () => {
         link: '#'
       }
     ],
-    articles: [
+   articles: [
       {
-        title: 'Articles coming soon',
-        description: 'Insights on healthcare compliance, program maturity, and risk will be published here.',
-        link: '#'
+        title: 'Cyber Resilience and Compliance: Lessons from HBO\'s The Pitt',
+        description: 'When a cyberattack hits a hospital, compliance becomes far more than a privacy issue — it\'s patient safety.',
+        publication: 'HCCA Compliance Today · July 2026',
+        link: 'https://www.linkedin.com/posts/ahmed-salim-jd-msc-ccep-chc-chpc-cipp-a390756_column-july-2026-ugcPost-7482658653985026048-ld8J/'
+      },
+      {
+        title: 'The DOJ\'s New Enforcement Policy: Is Your Compliance Program Ready to Respond?',
+        description: 'The DOJ\'s updated Corporate Enforcement and Voluntary Self-Disclosure Policy shifts the question from "Do you have a compliance program?" to "Can it respond in real time?" Co-authored with Brooke Buth and Kegan Mandadzhiev, CPA.',
+        publication: 'HCCA Compliance Today · July 2026',
+        link: 'https://www.linkedin.com/posts/ahmed-salim-jd-msc-ccep-chc-chpc-cipp-a390756_ct-july-2026-ugcPost-7482657999359135744-VfJ7/'
+      },
+      {
+        title: 'Medicare Advantage Under the Microscope: A Defining Moment for Healthcare Compliance',
+        description: 'A look at the increasing regulatory scrutiny facing Medicare Advantage programs and what it means for compliance leaders.',
+        publication: 'HCCA Compliance Today · May 2026',
+        link: 'https://www.linkedin.com/posts/ahmed-salim-jd-msc-ccep-chc-chpc-cipp-a390756_medicare-advantage-under-the-microscope-activity-7457476766303932416-_0su'
+      },
+      {
+        title: 'Change Management as the Missing Link in Prior Authorization Reform',
+        description: 'Prior authorization reform efforts often stall without deliberate change management.',
+        publication: 'HCCA Compliance Today · March 2026',
+        link: 'https://www.linkedin.com/posts/ahmed-salim-jd-msc-ccep-chc-chpc-cipp-a390756_change-management-as-the-missing-link-in-activity-7434972198710276096-6QZS'
       }
     ]
   };
@@ -373,10 +392,15 @@ const ComplianceConsultingWebsite = () => {
           ))}
         </div>
 
-        <h3 className="display text-2xl mb-6 navy">Articles</h3>
-        <div className="grid gap-6">
-          {insights.articles.map((article, i) => (
-            <a key={i} href={article.link} className="service-card p-8 bg-white block">
+       <h3 className="display text-2xl mb-6 navy">Articles</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          {resources.articles.map((article, i) => (
+            <a key={i} href={article.link} target="_blank" rel="noopener noreferrer" className="service-card p-8 bg-white block">
+              {article.publication && (
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full text-white mb-3" style={{backgroundColor: 'var(--green)'}}>
+                  {article.publication}
+                </span>
+              )}
               <h4 className="display text-xl mb-3 navy">{article.title}</h4>
               <p className="opacity-75 leading-relaxed text-sm">{article.description}</p>
             </a>
