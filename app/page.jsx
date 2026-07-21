@@ -43,9 +43,9 @@ const ComplianceConsultingWebsite = () => {
   const events = [
     {
       id: 1,
-      date: '[October 08, 2026]', // replace with your actual event date
+      date: 'October 08, 2026', // replace with your actual event date
       title: 'Compliance Foundations Summit 2026',
-      description: 'A virtual summit covering the foundations of an effective healthcare compliance program — practical guidance for compliance officers, GCs, and executive leadership.',
+      description: 'A virtual summit covering the foundations of an effective healthcare compliance program providing practical guidance for compliance officers.',
       registerLink: 'https://us05web.zoom.us/meeting/register/bFNdrQvvR7CavUV-SHXL7Q'
     },
     {
