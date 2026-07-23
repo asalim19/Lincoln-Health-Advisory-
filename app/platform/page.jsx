@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { logoDataUri } from '../logoData';
 import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck, Menu, X } from 'lucide-react';
 
