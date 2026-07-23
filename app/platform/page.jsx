@@ -2,13 +2,21 @@
 
 import React from 'react';
 import { logoDataUri } from '../logoData';
-import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck, Menu, X } from 'lucide-react';
+import { logoDataUri } from '../logoData';
 
+const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory';
+
+const Linkedin = ({ size = 20, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+  </svg>
+);
 // ⬇️ Working product name — change here, updates everywhere
 const PRODUCT_NAME = 'MaturityIQ';
 const CALENDLY_URL = 'https://calendly.com/ahmed-lincolnhealthcareadvisory/maturityiq'; // update
 
-export default function PlatformPage() {
+export default function PlatformPage() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const features = [
     {
       icon: <Gauge size={26} />,
@@ -67,13 +75,38 @@ export default function PlatformPage() {
         a { color:inherit; text-decoration:none; }
       `}</style>
 
-      {/* Header */}
-      <div style={{ background: 'white', borderBottom: '1px solid rgba(16,35,62,0.08)', padding: '0.75rem 1.5rem', position: 'sticky', top: 0, zIndex: 40 }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-<a href="/"><img src={logoDataUri} alt="Lincoln Healthcare Advisory" width={190} height={65} /></a>
-          <a href="/"><span style={{ fontSize: '.9rem', fontWeight: 500 }}>← Back to main site</span></a>
+     {/* Header */}
+      <nav style={{ background: 'white', borderBottom: '1px solid rgba(16,35,62,0.08)', position: 'sticky', top: 0, zIndex: 40 }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <a href="/"><img src={logoDataUri} alt="Lincoln Healthcare Advisory" width={190} height={65} /></a>
+
+          <div className="hidden md:flex" style={{ alignItems: 'center', gap: '1.5rem' }}>
+            <a href="/#about" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>About</a>
+            <a href="/#offerings" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>Offerings</a>
+            <a href="/#events" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>Events</a>
+            <a href="/#resources" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>Insights</a>
+            <a href="/assessment" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>Free Assessment</a>
+            <a href="/#contact" style={{ fontSize: '.9375rem', fontWeight: 500, color: '#10233E' }}>Contact</a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
+          </div>
+
+          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      </div>
+
+        {mobileMenuOpen && (
+          <div className="md:hidden" style={{ borderTop: '1px solid rgba(16,35,62,0.08)', padding: '1rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '.75rem' }}>
+            <a href="/#about" style={{ padding: '.5rem 0', color: '#10233E' }}>About</a>
+            <a href="/#offerings" style={{ padding: '.5rem 0', color: '#10233E' }}>Offerings</a>
+            <a href="/#events" style={{ padding: '.5rem 0', color: '#10233E' }}>Events</a>
+            <a href="/#resources" style={{ padding: '.5rem 0', color: '#10233E' }}>Insights</a>
+            <a href="/assessment" style={{ padding: '.5rem 0', color: '#10233E' }}>Free Assessment</a>
+            <a href="/#contact" style={{ padding: '.5rem 0', color: '#10233E' }}>Contact</a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" style={{ padding: '.5rem 0', display: 'flex', alignItems: 'center', gap: 8, color: '#10233E' }}><Linkedin size={18} /> LinkedIn</a>
+          </div>
+        )}
+      </nav>
 
       {/* Hero */}
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '5rem 1.5rem 4rem' }}>
