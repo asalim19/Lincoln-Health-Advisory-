@@ -3,7 +3,6 @@
 import React from 'react';
 import { logoDataUri } from '../logoData';
 import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck, Menu, X } from 'lucide-react';
-import { logoDataUri } from '../logoData';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory';
 
