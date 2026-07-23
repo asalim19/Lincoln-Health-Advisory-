@@ -42,6 +42,7 @@ const OPTIONS = [
 ];
 
 export default function AssessmentPage() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [step, setStep] = useState(-1); // -1 = intro, 0..15 = questions, 16 = contact, 17 = done
   const [answers, setAnswers] = useState({});
   const [contact, setContact] = useState({ name: '', email: '', organization: '', role: '' });
