@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { logoDataUri } from '../logoData';
 import { ArrowRight, ArrowLeft, CheckCircle, Menu, X } from 'lucide-react';
-import { logoDataUri } from '../logoData';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory';
 
@@ -43,7 +42,6 @@ const OPTIONS = [
 ];
 
 export default function AssessmentPage() {
-  const [step, setStep] = useState(-1);
   const [step, setStep] = useState(-1); // -1 = intro, 0..15 = questions, 16 = contact, 17 = done
   const [answers, setAnswers] = useState({});
   const [contact, setContact] = useState({ name: '', email: '', organization: '', role: '' });
