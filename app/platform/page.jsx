@@ -91,7 +91,7 @@ export default function PlatformPage() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              <button className="pf-cta">Schedule a Demo <ArrowRight size={18} /></button>
+              <button className="pf-cta"> Request Pilot Access <ArrowRight size={18} /></button>
             </a>
             <a href="/assessment"><button className="pf-cta-outline">Try the Free Assessment</button></a>
           </div>
