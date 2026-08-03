@@ -472,13 +472,14 @@ I
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy text-white">
+     <footer className="bg-navy text-white">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
             <div className="display text-lg">Lincoln Healthcare Advisory</div>
             <div className="flex items-center gap-8 text-sm opacity-80">
               <a href="#events">Events</a>
-              <a href="#insights">Insights</a>
+              <a href="#resources">Resources</a>
+              <a href="/privacy">Privacy Policy</a>
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             </div>
           </div>
