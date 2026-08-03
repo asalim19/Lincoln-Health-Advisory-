@@ -57,10 +57,11 @@ const ComplianceConsultingWebsite = () => {
   ];
 
   const insights = {
-    podcasts: [
+podcasts: [
       {
-        title: 'Finding Compliance',
-        description: 'Honest conversations behind the careers shaping healthcare compliance.',
+        title: 'Honest Conversations: A Healthcare Compliance Podcast',
+        description: 'Presented by Lincoln Healthcare Advisory — honest conversations behind the careers shaping healthcare compliance.',
+        comingSoon: true,
         link: '#'
       }
     ],
@@ -397,12 +398,21 @@ const ComplianceConsultingWebsite = () => {
 
 <h3 className="display text-2xl mb-6 navy">Podcast</h3>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
-          {insights.podcasts.map((pod, i) => (
-            <a key={i} href={pod.link} className="service-card p-8 bg-white block">
+       {insights.podcasts.map((pod, i) => (
+            <div key={i} className="service-card p-8 bg-white">
+              {pod.comingSoon && (
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full text-white mb-3" style={{backgroundColor: 'var(--green)'}}>
+                  Coming Soon
+                </span>
+              )}
               <h4 className="display text-xl mb-3 navy">{pod.title}</h4>
               <p className="opacity-75 leading-relaxed text-sm">{pod.description}</p>
-              <span className="green text-sm font-semibold mt-4 inline-flex items-center gap-1">Listen <ArrowRight size={14} /></span>
-            </a>
+              {!pod.comingSoon && (
+                <a href={pod.link} className="green text-sm font-semibold mt-4 inline-flex items-center gap-1">
+                  Listen <ArrowRight size={14} />
+                </a>
+              )}
+            </div>
           ))}
         </div>
 
