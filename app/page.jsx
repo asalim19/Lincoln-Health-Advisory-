@@ -239,7 +239,9 @@ podcasts: [
             <a href="#events" className="nav-link">Events</a>
             <a href="#insights" className="nav-link">Insights</a>
             <a href="/assessment" className="nav-link">Free Assessment</a>
-            <a href="/platform" className="nav-link">MaturityIQ</a>
+<a href="/platform" className="nav-link">
+              MaturityIQ<sup style={{color: 'var(--green)', fontSize: '.6em', fontWeight: 700, marginLeft: 2}}>BETA</sup>
+            </a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
             <a href="#contact"><button className="cta-button">Get Started</button></a>
@@ -257,7 +259,9 @@ podcasts: [
             <a href="#events" className="block py-2">Events</a>
             <a href="#insights" className="block py-2">Insights</a>
             <a href="/assessment" className="block py-2">Free Assessment</a>
-            <a href="/platform" className="block py-2">MaturityIQ</a>
+<a href="/platform" className="block py-2">
+              MaturityIQ<sup style={{color: 'var(--green)', fontSize: '.6em', fontWeight: 700, marginLeft: 2}}>BETA</sup>
+            </a>
             <a href="#contact" className="block py-2">Contact</a>
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="py-2 flex items-center gap-2"><Linkedin size={18} /> LinkedIn</a>
           </div>
