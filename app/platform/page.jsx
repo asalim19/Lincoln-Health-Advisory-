@@ -111,15 +111,24 @@ export default function PlatformPage() {const [mobileMenuOpen, setMobileMenuOpen
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: '5rem 1.5rem 4rem' }}>
         <div style={{ maxWidth: 760 }}>
           <div className="pf-divider"></div>
-          <div style={{ color: '#427E2B', fontWeight: 600, letterSpacing: 2, fontSize: '.85rem', marginBottom: '1rem' }}>
-            {PRODUCT_NAME.toUpperCase()} — COMPLIANCE MATURITY PLATFORM
+          <div style={{ display: 'flex', alignItems: 'center', gap: '.75rem', marginBottom: '1rem' }}>
+            <span style={{ color: '#427E2B', fontWeight: 600, letterSpacing: 2, fontSize: '.85rem' }}>
+              {PRODUCT_NAME.toUpperCase()} — COMPLIANCE MATURITY PLATFORM
+            </span>
+            <span style={{ backgroundColor: '#29B866', color: 'white', fontSize: '.75rem', fontWeight: 700, letterSpacing: 1, padding: '.2rem .6rem', borderRadius: '999px' }}>
+              BETA
+            </span>
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem' }}>
             Your compliance program, <span style={{ color: '#29B866' }}>measured like regulators measure it.</span>
           </h1>
-          <p style={{ fontSize: '1.15rem', opacity: .78, lineHeight: 1.7, marginBottom: '2rem', maxWidth: 640 }}>
+         <p style={{ fontSize: '1.15rem', opacity: .78, lineHeight: 1.7, marginBottom: '1rem', maxWidth: 640 }}>
             {PRODUCT_NAME} is an AI-powered platform that helps healthcare organizations assess, score, and mature their
             compliance programs — built on a proprietary maturity model grounded in the DOJ ECCP and OIG effectiveness frameworks.
+          </p>
+          <p style={{ fontSize: '1rem', opacity: .68, lineHeight: 1.7, marginBottom: '2rem', maxWidth: 640, fontStyle: 'italic' }}>
+            We're in beta, working closely with a small group of organizations to shape the platform before wider release.
+            Request pilot access below to be part of that group.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
