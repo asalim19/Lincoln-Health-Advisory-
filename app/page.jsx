@@ -372,7 +372,7 @@ podcasts: [
         </div>
       </section>
 
-      {/* Events */}
+     {/* Events */}
       <section id="events" className="bg-soft py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="section-divider"></div>
@@ -414,8 +414,9 @@ podcasts: [
                 </div>
               </div>
             ))}
+          </div>
+        </div>
       </section>
-
       {/* Insights */}
       <section id="insights" className="max-w-6xl mx-auto px-6 py-24">
         <div className="section-divider"></div>
