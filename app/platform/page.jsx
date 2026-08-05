@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { logoDataUri } from '../logoData';
+import { platformScreenshots } from '../platformScreenshotsData';
 import { ArrowRight, Brain, Gauge, FileCheck, TrendingUp, Building2, ShieldCheck, Menu, X } from 'lucide-react';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory';
@@ -15,7 +16,7 @@ const Linkedin = ({ size = 20, className = '' }) => (
 const PRODUCT_NAME = 'MaturityIQ';
 const CALENDLY_URL = 'https://calendly.com/ahmed-lincolnhealthcareadvisory/maturityiq'; // update
 
-export default function PlatformPage() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function PlatformPage() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false);const [activeShot, setActiveShot] = useState(0);
   const features = [
     {
       icon: <Gauge size={26} />,
@@ -138,7 +139,44 @@ export default function PlatformPage() {const [mobileMenuOpen, setMobileMenuOpen
           </div>
         </div>
       </section>
+{/* Product Preview */}
+      <section style={{ backgroundColor: '#F7F9FB', padding: '4rem 1.5rem' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <div className="pf-divider"></div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '.5rem' }}>See it in action</h2>
+          <p style={{ opacity: .7, marginBottom: '2rem', maxWidth: 640 }}>
+            A live look at the beta platform — real screens, not mockups.
+          </p>
 
+          <div style={{ border: '1px solid rgba(16,35,62,0.1)', borderRadius: 16, overflow: 'hidden', background: 'white', boxShadow: '0 12px 32px rgba(16,35,62,0.08)' }}>
+            <img src={platformScreenshots[activeShot].src} alt={platformScreenshots[activeShot].caption} style={{ width: '100%', display: 'block' }} />
+            <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid rgba(16,35,62,0.08)', fontSize: '.9rem', color: '#10233E', opacity: .8 }}>
+              {platformScreenshots[activeShot].caption}
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', gap: '.75rem', marginTop: '1.25rem', flexWrap: 'wrap' }}>
+            {platformScreenshots.map((shot, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveShot(i)}
+                style={{
+                  border: i === activeShot ? '2px solid #29B866' : '2px solid transparent',
+                  borderRadius: 10,
+                  overflow: 'hidden',
+                  padding: 0,
+                  cursor: 'pointer',
+                  width: 120,
+                  opacity: i === activeShot ? 1 : .6,
+                  transition: 'opacity .2s ease'
+                }}
+              >
+                <img src={shot.src} alt={shot.caption} style={{ width: '100%', display: 'block' }} />
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Why it exists */}
       <section style={{ backgroundColor: '#F7F9FB', padding: '4.5rem 1.5rem' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
