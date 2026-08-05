@@ -36,8 +36,9 @@ const ComplianceConsultingWebsite = () => {
     {
       id: 4,
       title: 'MaturityIQ — Compliance Maturity Platform',
-      description: 'License our AI-powered platform to measure and mature your compliance program on your own schedule. Built on the same proprietary maturity model as our assessments — grounded in DOJ ECCP and OIG effectiveness frameworks — with continuous scoring, roadmaps, and board-ready reporting.',
-      isPlatform: true
+      description: 'Now in beta. License our AI-powered platform to measure and mature your compliance program on your own schedule. Built on the same proprietary maturity model as our assessments, grounded in DOJ ECCP and OIG effectiveness frameworks, with continuous scoring, roadmaps, and board-ready reporting.',
+      isPlatform: true,
+      isBeta: true
     }
   ];
 
@@ -293,10 +294,13 @@ podcasts: [
           </div>
 
           <div className="service-card p-8 bg-white" style={{borderTopColor: '#28788A'}}>
-            <div className="display text-sm font-semibold uppercase tracking-widest mb-3" style={{color: '#28788A'}}>Pillar Two</div>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="display text-sm font-semibold uppercase tracking-widest" style={{color: '#28788A'}}>Pillar Two</div>
+              <span className="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full text-white" style={{backgroundColor: 'var(--green)'}}>Beta</span>
+            </div>
             <h3 className="display text-2xl mb-4 navy">Intelligence</h3>
             <p className="opacity-75 leading-relaxed text-sm">
-              MaturityIQ delivers AI-powered measurement, benchmarking, and insights — your compliance program, scored the way regulators evaluate it.
+              MaturityIQ delivers AI-powered measurement, benchmarking, and insights — your compliance program, scored the way regulators evaluate it. Now in beta with a limited group of organizations.
             </p>
             <a href="/platform" className="green text-sm font-semibold mt-4 inline-flex items-center gap-1">
               Explore the platform <ArrowRight size={14} />
@@ -360,8 +364,15 @@ podcasts: [
         <div className="grid gap-6">
           {services.map((service) => (
 <div key={service.id} className="service-card p-8 bg-white" style={service.isPlatform ? {borderTopColor: '#28788A'} : {}}>
-{service.isPlatform && <div className="text-xs font-semibold uppercase tracking-widest mb-2" style={{color: '#28788A'}}>Licensed Platform</div>}
-              <h3 className="display text-2xl mb-4 navy">{service.title}</h3>
+{service.isPlatform && (
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-semibold uppercase tracking-widest" style={{color: '#28788A'}}>Licensed Platform</span>
+                  {service.isBeta && (
+                    <span className="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full text-white" style={{backgroundColor: 'var(--green)'}}>Beta</span>
+                  )}
+                </div>
+              )}
+  <h3 className="display text-2xl mb-4 navy">{service.title}</h3>
               {service.isPlatform && (
                 <a href="/platform" className="green text-sm font-semibold inline-flex items-center gap-1 mb-4">
                   Learn more about MaturityIQ <ArrowRight size={14} />
