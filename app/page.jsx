@@ -46,13 +46,13 @@ const ComplianceConsultingWebsite = () => {
       id: 1,
       date: 'Thursday, September 10, 2026 · 12:00 PM CT',
       title: 'From Reactive to Ready: Mastering Compliance Through Change Management',
-      description: 'Compliance doesn\'t fail because people don\'t know the rules — it fails because programs can\'t keep up with change: new regulations, new leadership, new systems, new risk. Join this free 1-hour webinar for a practical look at building change management into your compliance program.',
+      description: 'Compliance doesn\'t fail because people don\'t know the rules. It fails because programs can\'t keep up with change: new regulations, new leadership, new systems, new risk. Join this free 1-hour webinar for a practical look at building change management into your compliance program.',
       bullets: [
         'Anticipate regulatory and organizational change instead of reacting to it',
         'Embed change management into your compliance program so it adapts by design',
         'Keep controls, training, and culture aligned when everything around them shifts'
       ],
-      bonus: 'The first 100 registrants are entered into a drawing to win a signed copy of the book. Live Q&A at the end — bring your toughest change scenarios.',
+      bonus: 'The first 100 registrants are entered into a drawing to win a signed copy of the book. Live Q&A at the end, bring your toughest change scenarios.',
       image: bookCoverDataUri,
       registerLink: 'https://us06web.zoom.us/meeting/register/364CTrlqTKmVmrj62NEpgA'
     },
@@ -60,7 +60,7 @@ const ComplianceConsultingWebsite = () => {
       id: 2,
       date: 'October 8, 2026',
       title: 'Compliance Foundations Summit 2026',
-      description: 'A virtual summit covering the foundations of an effective healthcare compliance program — practical guidance for compliance officers, GCs, and executive leadership.',
+      description: 'A virtual summit covering the foundations of an effective healthcare compliance program, with practical guidance for compliance officers, GCs, and executive leadership.',
       registerLink: 'https://us05web.zoom.us/meeting/register/bFNdrQvvR7CavUV-SHXL7Q'
     }
   ];
