@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { logoDataUri } from './logoData';
+import { bookCoverDataUri } from './bookCoverData';
 import { Menu, X, ArrowRight, Calendar, BookOpen, Mic, Users, Briefcase, Mail } from 'lucide-react';
 const LINKEDIN_URL = 'https://www.linkedin.com/company/lincoln-healthcare-advisory'; // update to your actual page
 const CONTACT_FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeeyzpvg';
@@ -43,16 +44,24 @@ const ComplianceConsultingWebsite = () => {
   const events = [
     {
       id: 1,
-      date: 'October 08, 2026', // replace with your actual event date
-      title: 'Compliance Foundations Summit 2026',
-      description: 'A virtual summit covering the foundations of an effective healthcare compliance program providing practical guidance for compliance officers.',
-      registerLink: 'https://us05web.zoom.us/meeting/register/bFNdrQvvR7CavUV-SHXL7Q'
+      date: 'Thursday, September 10, 2026 · 12:00 PM CT',
+      title: 'From Reactive to Ready: Mastering Compliance Through Change Management',
+      description: 'Compliance doesn\'t fail because people don\'t know the rules — it fails because programs can\'t keep up with change: new regulations, new leadership, new systems, new risk. Join this free 1-hour webinar for a practical look at building change management into your compliance program.',
+      bullets: [
+        'Anticipate regulatory and organizational change instead of reacting to it',
+        'Embed change management into your compliance program so it adapts by design',
+        'Keep controls, training, and culture aligned when everything around them shifts'
+      ],
+      bonus: 'The first 100 registrants are entered into a drawing to win a signed copy of the book. Live Q&A at the end — bring your toughest change scenarios.',
+      image: bookCoverDataUri,
+      registerLink: 'https://us06web.zoom.us/meeting/register/364CTrlqTKmVmrj62NEpgA'
     },
     {
       id: 2,
-      date: 'Coming Soon',
-      title: 'Speaking engagements & webinars',
-      description: 'Additional conference sessions, webinars, and workshops will be posted here.'
+      date: 'October 8, 2026',
+      title: 'Compliance Foundations Summit 2026',
+      description: 'A virtual summit covering the foundations of an effective healthcare compliance program — practical guidance for compliance officers, GCs, and executive leadership.',
+      registerLink: 'https://us05web.zoom.us/meeting/register/bFNdrQvvR7CavUV-SHXL7Q'
     }
   ];
 
@@ -374,18 +383,37 @@ podcasts: [
           <div className="grid gap-6">
             {events.map((event) => (
               <div key={event.id} className="service-card p-8 bg-white">
-                <div className="text-sm green font-semibold mb-2">{event.date}</div>
-                <h3 className="display text-2xl mb-3 navy">{event.title}</h3>
-                <p className="opacity-75 leading-relaxed mb-4">{event.description}</p>
-                {event.registerLink && (
-                  <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
-                    <button className="cta-button">Register Now <ArrowRight size={18} /></button>
-                  </a>
-                )}
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="md:col-span-2">
+                    <div className="text-sm green font-semibold mb-2">{event.date}</div>
+                    <h3 className="display text-2xl mb-3 navy">{event.title}</h3>
+                    <p className="opacity-75 leading-relaxed mb-4">{event.description}</p>
+                    {event.bullets && (
+                      <ul className="mb-4 space-y-2">
+                        {event.bullets.map((b, i) => (
+                          <li key={i} className="flex gap-2 text-sm opacity-80">
+                            <span className="green font-bold">✓</span><span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {event.bonus && (
+                      <p className="text-sm opacity-75 mb-4 italic">{event.bonus}</p>
+                    )}
+                    {event.registerLink && (
+                      <a href={event.registerLink} target="_blank" rel="noopener noreferrer">
+                        <button className="cta-button">Register Now <ArrowRight size={18} /></button>
+                      </a>
+                    )}
+                  </div>
+                  {event.image && (
+                    <div className="flex items-center justify-center">
+                      <img src={event.image} alt={event.title} className="rounded-lg w-full" style={{border: '1px solid rgba(16,35,62,0.1)'}} />
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
-          </div>
-        </div>
       </section>
 
       {/* Insights */}
